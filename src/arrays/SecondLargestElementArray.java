@@ -48,13 +48,30 @@ public class SecondLargestElementArray {
         }
         return secLargest;
     }
+    private static int getSecLargestElement(int arr[],int n){
+        int max  = Integer.MIN_VALUE;
+        int secMax  = Integer.MIN_VALUE;
 
+        for(int i=0;i<n;i++){
+            if(arr[i] > max){
+                secMax = max;
+                max= arr[i];
+            }else if(arr[i] > secMax && arr[i] != max){
+                secMax = arr[i];
+            }
+        }
+        return secMax;
+    }
 
 
     public static void main(String[] args) {
         int ar[] = {1,223,22,423,241};
         //System.out.println(getSecMax(ar,ar.length));
-        System.out.println(getSecMaxOptimal(ar,ar.length));
+        //  optimal
+        // System.out.println(getSecMaxOptimal(ar,ar.length));
+
+        // another optimal and easy to understand
+        System.out.println(getSecLargestElement(ar,ar.length));
 
     }
 }
