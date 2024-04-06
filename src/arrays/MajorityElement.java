@@ -16,6 +16,9 @@ public class MajorityElement {
 
         }
         return -1;
+
+
+
     }
 
     private static int findMajorityElementOptimize(int arr[], int n){
