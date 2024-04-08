@@ -14,6 +14,8 @@ public class FactorialOfNumber {
             return 1;
         return n * getFactorialOfNumberRecursive(n-1);
     }
+
+
     public static void main(String[] args) {
         int n = 5;
         System.out.println(getFactorialOfNumberNaive(n));
