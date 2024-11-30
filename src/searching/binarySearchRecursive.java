@@ -21,7 +21,6 @@ public class binarySearchRecursive {
 
     public static void main(String[] args) {
         int arr[] = {10,20,30,40,50,60};
-
         int element = 60;
         System.out.println(binarySearchingRecursive(arr,element,0, arr.length));
     }
