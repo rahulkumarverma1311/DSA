@@ -41,8 +41,8 @@ public class TrailingZerosInFactorial {
     }
 
     public static void main(String[] args) {
-        System.out.println("naive solution:-"+ getTrailingZeroInFactorialNAive(10));
-        System.out.println("optimal solution:-"+ getTrailingZeroInFactorial(251));
+//        System.out.println("naive solution:-"+ getTrailingZeroInFactorialNAive(10));
+        System.out.println("optimal solution:-"+ getTrailingZeroInFactorial(125));
 
     }
 }
