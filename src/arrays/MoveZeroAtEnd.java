@@ -16,6 +16,18 @@ public class MoveZeroAtEnd {
             count++;
         }
     }
+    private static void zeroAtEndOp(int arr[]){
+        int count = 0;
+        for(int i =0;i< arr.length ;i++){
+            if(arr[i]!=0){
+                int temp = arr[i];
+                arr[i] = arr[count];
+                arr[count] =temp;
+                count++;
+
+            }
+        }
+    }
 
 
     private static void zeroAtEnd(int arr[],int n){
@@ -38,7 +50,8 @@ public class MoveZeroAtEnd {
         int n = arr.length;
         //zeroAtEnd(arr,n);
 
-        zeroAtEndOptimize(arr,n);
+//        zeroAtEndOptimize(arr,n);
+        zeroAtEndOp(arr);
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+" ");
         }
