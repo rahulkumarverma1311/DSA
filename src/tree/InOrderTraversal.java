@@ -7,7 +7,7 @@ class InOrder{
         this.data= data;
     }
 }
-
+    
 public class InOrderTraversal {
     private static void inorder(InOrder node){
         if(node != null ){
