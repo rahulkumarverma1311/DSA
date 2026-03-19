@@ -17,12 +17,15 @@ public class MeanAndMedien {
     private static int mean(int A[],int N)
     {
         //Your code here
-        int sum = 0;
+//        int sum = 0;
+//
+//        for(int i=0;i<N;i++){
+//            sum+= A[i];
+//        }
+//        return (int) (sum/ N);
+//
 
-        for(int i=0;i<N;i++){
-            sum+= A[i];
-        }
-        return (int) (sum/ N);
+        return (int) (Arrays.stream(A).sum() / A.length);
     }
 
     public static void main(String[] args) {

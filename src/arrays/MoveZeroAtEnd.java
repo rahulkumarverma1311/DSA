@@ -16,6 +16,7 @@ public class MoveZeroAtEnd {
             count++;
         }
     }
+    // just count the non zero element end swap if you find non zero element
     private static void zeroAtEndOp(int arr[]){
         int count = 0;
         for(int i =0;i< arr.length ;i++){

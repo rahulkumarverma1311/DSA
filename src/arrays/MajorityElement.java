@@ -41,7 +41,7 @@ public class MajorityElement {
                 count++;
         }
             if(count <= n/2){
-                res = -1;
+                return -1;
             }
 
         return arr[res];
@@ -54,7 +54,8 @@ public class MajorityElement {
 
     public static void main(String[] args) {
         // for a Majority Element it should comes n/2 times
-        int arr[] = {8,7,6,8,6,8,8,8,8};
+//        int arr[] = {8,7,6,8,6,8,8,8,8};
+        int arr[] = {1,2,3,4,5,6};
         int n= arr.length;
 //        System.out.println(findMajorityElement(arr,n));
         System.out.println(findMajorityElementOptimize(arr,n));
