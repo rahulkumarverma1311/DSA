@@ -48,8 +48,8 @@ private static void bubbleSortForSortedArray(int arr[],int n){
         int arr[]= {3,60,35,2,45,320,5};
 //        int arr[] = {1,2,3,4,5};
         int n = arr.length;
-//        bubbleSort(arr,n);
-        bubbleSortOptimize(arr,n);
+        bubbleSort(arr,n);
+//        bubbleSortOptimize(arr,n);
 //        bubbleSortForSortedArray(arr,n);
         for(int i=0;i<n;i++){
             System.out.print(arr[i]+ " ");
