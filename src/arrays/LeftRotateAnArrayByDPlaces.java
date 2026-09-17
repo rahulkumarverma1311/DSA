@@ -48,13 +48,33 @@ public class LeftRotateAnArrayByDPlaces {
         reverseArray(arr,0,n-1);
     }
 
+
+
+    private static void rotateByDPlaceMy(int arr[] ,int n,int d){
+        d= d % n;
+        int temp[] = new int[d];
+        for(int i=0;i< d;i++){
+            temp[i] = arr[i];
+        }
+        for(int i =d;i<n;i++){
+            arr[i- d] = arr[i];
+        }
+
+        for(int i = n -d ;i< n ;i++){
+            arr[i] = temp[i -(n -d)];
+        }
+
+    }
+
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
         int n = arr.length;
 //        leftRotateByDTimeNaive(arr,n,2);
 //        leftRotateByDTimeWIthExtraSpace(arr,n,2);
-        leftRotateArrayOptimize(arr,n,2);
+//        leftRotateArrayOptimize(arr,n,2);
+        rotateByDPlaceMy(arr,n,2);
         for(int i : arr){
+
             System.out.print(i + " ");
         }
     }

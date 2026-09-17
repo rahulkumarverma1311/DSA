@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MajorityElement {
 
     private static int findMajorityElement(int arr[], int n){
@@ -19,6 +22,22 @@ public class MajorityElement {
 
 
 
+    }
+
+
+    private static int findMajorityElementHashing(int arr[],int n){
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int i=0;i<n;i++){
+            if(map.containsKey(arr[i])){
+                map.put(arr[i],map.get(arr[i])+1);
+            }else{
+                map.put(arr[i],1);
+            }
+            if(map.get(arr[i])> n/2)
+                return arr[i];
+        }
+        return -1;
     }
 
     private static int findMajorityElementOptimize(int arr[], int n){
@@ -54,10 +73,11 @@ public class MajorityElement {
 
     public static void main(String[] args) {
         // for a Majority Element it should comes n/2 times
-//        int arr[] = {8,7,6,8,6,8,8,8,8};
-        int arr[] = {1,2,3,4,5,6};
+        int arr[] = {8,7,6,8,6,8,8,8,8};
+//        int arr[] = {1,2,3,4,5,6};
         int n= arr.length;
 //        System.out.println(findMajorityElement(arr,n));
-        System.out.println(findMajorityElementOptimize(arr,n));
+//        System.out.println(findMajorityElementOptimize(arr,n));
+        System.out.println(findMajorityElementHashing(arr,n));
     }
 }
